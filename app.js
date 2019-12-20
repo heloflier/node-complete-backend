@@ -1,8 +1,11 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
 
 const app = express();
+
+app.use(logger('dev'));
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
